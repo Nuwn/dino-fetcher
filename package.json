@@ -1,0 +1,22 @@
+{
+  "name": "dino",
+  "version": "1.0.0",
+  "description": "dino",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nuwn/dino-fetcher.git"
+  },
+  "keywords": [
+    "dino"
+  ],
+  "author": "patrickeisala <nuwn@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nuwn/dino-fetcher/issues"
+  },
+  "homepage": "https://github.com/Nuwn/dino-fetcher#readme"
+}
