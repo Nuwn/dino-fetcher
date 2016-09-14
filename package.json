@@ -4,12 +4,19 @@
   "main": "src/index.js",
   "version": "0.0.0",
   "scripts": {
-    "test": "mocha src/index.test.js",
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "report-coverage": "codecov",
+    "test": "mocha --reporter nyan",
+    "test:watch": "npm t -- --watch",
+    "test-single": "istanbul cover -x *.test.js node_modules/mocha/bin/_mocha -- --R spec test/index.test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm run test single && npm run check-coverage"
     }
   },
   "repository": {
@@ -17,7 +24,7 @@
     "url": "https://github.com/Nuwn/dino-fetcher.git"
   },
   "keywords": [
-    "dino"
+    "javascript"
   ],
   "author": "patrickeisala <nuwn@hotmail.com>",
   "license": "MIT",
@@ -32,6 +39,7 @@
   },
   "devDependencies": {
     "codecov": "^1.0.1",
+    "codecov.io": "^0.1.6",
     "commitizen": "^2.8.6",
     "cz-conventional-changelog": "^1.2.0",
     "ghooks": "^1.3.2",

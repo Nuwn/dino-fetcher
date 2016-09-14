@@ -6,7 +6,7 @@ var getRandomItem = uniqueRandomArray(dino);
 
 module.exports = {
     all: dino,
-    random: uniqueRandomArray(dino)
+    random: random
 };
 
 function random(number) {

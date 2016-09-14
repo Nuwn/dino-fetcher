@@ -1,5 +1,5 @@
 var expect = require('chai').expect,
-    dino = require('./index');
+    dino = require('../src/index');
 
 describe('dino-name', function () {
 
@@ -29,6 +29,15 @@ describe('random', function () {
     it('should return a random dino', function () {
         var randomItem = dino.random();
         expect(dino.all).to.include(randomItem);
+    });
+
+    it('should return a an array of random items, if passed a number', function () {
+            var randomItems = dino.random(3);
+            expect(randomItems).to.have.length(3);
+            randomItems.forEach(function(item){
+                expect(dino.all).to.include(item);
+            });
+
     });
     
 });
