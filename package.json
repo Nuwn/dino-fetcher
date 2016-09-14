@@ -8,7 +8,7 @@
     "report-coverage": "codecov",
     "test": "mocha --reporter nyan",
     "test:watch": "npm t -- --watch",
-    "test-single": "istanbul cover -x *.test.js node_modules/mocha/bin/_mocha -- --R spec test/index.test.js",
+    "test-single": "istanbul cover -x *.test.js node_modules/mocha/bin/_mocha -- --reporter spec test/index.test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "config": {
