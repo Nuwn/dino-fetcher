@@ -1,14 +1,20 @@
 {
   "name": "patkei",
-  "version": "1.5.0-beta.1",
   "description": "dino",
   "main": "src/index.js",
+  "version": "0.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/index.test.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nuwn/dino-fetcher.git"
+    "url": "https://github.com/Nuwn/dino-fetcher.git"
   },
   "keywords": [
     "dino"
@@ -18,5 +24,18 @@
   "bugs": {
     "url": "https://github.com/Nuwn/dino-fetcher/issues"
   },
-  "homepage": "https://github.com/Nuwn/dino-fetcher#readme"
+  "homepage": "https://github.com/Nuwn/dino-fetcher#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "unique-random-array": "^1.0.0"
+  },
+  "devDependencies": {
+    "codecov": "^1.0.1",
+    "commitizen": "^2.8.6",
+    "cz-conventional-changelog": "^1.2.0",
+    "ghooks": "^1.3.2",
+    "istanbul": "^0.4.5",
+    "semantic-release": "^4.3.5"
+  }
 }
